@@ -1,7 +1,7 @@
 name: open_file_safely
 description: A new Flutter project.
 version: 0.0.1
-homepage:
+homepage: https://github.com/amitkumar9717291746/open_file_safely.git
 
 environment:
   sdk: '>=2.19.0 <3.0.0'
