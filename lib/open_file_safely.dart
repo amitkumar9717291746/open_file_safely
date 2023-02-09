@@ -1,4 +1,4 @@
-library open_file_safe;
+library open_file_safely;
 
 export 'src/common/open_result.dart';
 export 'src/plaform/open_file_safe.dart'

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 
-import 'package:open_file_safely/open_file_safe.dart';
+import 'package:open_file_safely/open_file_safely.dart';
 
 void main() => runApp(MyApp());
 

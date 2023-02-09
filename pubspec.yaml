@@ -1,5 +1,5 @@
 name: open_file_safely
-description: A new Flutter project.
+description: A plug-in that can call native APP to open files with string result in flutter, support iOS(UTI) / android(intent) / PC(ffi) / web(dart:html)
 version: 0.0.1
 homepage: https://github.com/amitkumar9717291746/open_file_safely.git
 

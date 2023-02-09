@@ -27,11 +27,11 @@ int shellExecute(String operation, String file) {
   // Allocate pointers to Utf8 arrays containing the command arguments.
   final operationP = operation.toNativeUtf16();
   final fileP = file.toNativeUtf16();
-  const int SW_SHOWNORMAL = 1;
+  const int swShowNormal = 1;
 
   // Invoke the command, and free the pointers.
   final result = shellExecuteP(
-      ffi.nullptr, operationP, fileP, ffi.nullptr, ffi.nullptr, SW_SHOWNORMAL);
+      ffi.nullptr, operationP, fileP, ffi.nullptr, ffi.nullptr, swShowNormal);
   calloc.free(operationP);
   calloc.free(fileP);
 
