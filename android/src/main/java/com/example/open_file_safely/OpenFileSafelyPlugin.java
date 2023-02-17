@@ -346,7 +346,7 @@ public class OpenFileSafelyPlugin implements FlutterPlugin, MethodCallHandler , 
         startInstallPermissionSettingActivity();
       } else {
         ActivityCompat.requestPermissions(activity,
-                new String[]{Manifest.permission.REQUEST_INSTALL_PACKAGES}, REQUEST_CODE);
+                new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, REQUEST_CODE);
       }
     } else {
       startActivity();
@@ -358,7 +358,7 @@ public class OpenFileSafelyPlugin implements FlutterPlugin, MethodCallHandler , 
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
       return activity.getPackageManager().canRequestPackageInstalls();
     }
-    return hasPermission(Manifest.permission.REQUEST_INSTALL_PACKAGES);
+    return hasPermission(Manifest.permission.READ_EXTERNAL_STORAGE);
   }
 
   @RequiresApi(api = Build.VERSION_CODES.O)
@@ -397,7 +397,7 @@ public class OpenFileSafelyPlugin implements FlutterPlugin, MethodCallHandler , 
       if (canInstallApk()) {
         startActivity();
       } else {
-        result(-3, "Permission denied: " + Manifest.permission.REQUEST_INSTALL_PACKAGES);
+        result(-3, "Permission denied: " + requestCode);
       }
     }
     return false;
